@@ -22,5 +22,13 @@ namespace Catalog.Controllers
             var items = repository.GetItems();
             return items;
         }
+
+        // GET /items/{id}
+        [HttpGet("{id}")]
+        public Item? GetItem(Guid id)
+        {
+            var item = repository.GetItem(id);
+            return item;
+        }
     }
 }
